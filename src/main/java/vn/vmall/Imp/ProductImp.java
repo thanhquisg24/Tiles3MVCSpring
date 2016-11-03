@@ -21,5 +21,18 @@ public class ProductImp implements ProductInterface{
 		// TODO Auto-generated method stub
 		return dal.getListProductByCatgory(catgory);
 	}
+
+	@Override
+	public int count_product_bycatgory(CatgoryEntity catgory) {
+		// TODO Auto-generated method stub
+		return dal.count_product_bycatgory(catgory);
+	}
+
+	@Override
+	public List<ProductEntity> getListProductByCatgory(CatgoryEntity catgory,
+			int start, int limit) {
+		// TODO Auto-generated method stub
+		return dal.getListProductByCatgory(catgory,start,limit);
+	}
 	
 }

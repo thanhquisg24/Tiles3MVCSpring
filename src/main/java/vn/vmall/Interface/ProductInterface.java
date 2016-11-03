@@ -9,4 +9,9 @@ public interface ProductInterface {
 
 	List<ProductEntity> getListProductByCatgory(CatgoryEntity catgory);
 
+	int count_product_bycatgory(CatgoryEntity catgory);
+
+	List<ProductEntity> getListProductByCatgory(CatgoryEntity catgory,
+			int start, int limit);
+
 }

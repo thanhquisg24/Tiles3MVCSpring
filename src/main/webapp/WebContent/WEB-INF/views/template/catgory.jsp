@@ -6,8 +6,12 @@
     Catgory
   </h4>
   
-  <c:forEach var="catgory_o" items="${listcatgory}" varStatus="loopCounter">
-	<a href="${url_href_view_productlistby_catgory}/<c:out value="${catgory_o.id}" />" 
+  <spring:eval expression="T(vn.vmall.Helper.Extra).extra_list_catgory()" var="static_listcatgory" />
+	
+  <c:forEach var="catgory_o" items="${static_listcatgory}" varStatus="loopCounter">
+
+	<a href="${pageContext.servletContext.contextPath}/xem-danh-muc/<c:out value="${catgory_o.id}" />" 
+	
 		class="list-group-item list-group-item-action 
 					<c:if test="${catgory_o.id==PathVariablecatgoryid}">
 							 group-active
